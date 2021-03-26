@@ -58,6 +58,14 @@ Obejct.prototype.toString.call({}) // [object Object]
 + 当作为普通函数，this指向window
 + 当作为对象的属性方法被调用时，this指向该对象
 + new的时候this指向该实例
++ 箭头函数this指向它上一层作用域的this
+
+### 改变this指向
++ call
++ apply 
++ bind
+
+
 ## 执行上下文
 执行上下文可以理解为当前代码的执行环境，它会形成一个作用域。js中运行环境分为3种：
 + 全局环境
