@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-24 13:42:57
- * @LastEditTime: 2021-03-27 14:54:28
+ * @LastEditTime: 2021-03-29 14:54:24
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /study/happyStudy/others/README.md
@@ -102,3 +102,20 @@ function deepClone() {
 + 全局环境
 + 函数环境
 + eval环境
+
+## React
+### 生命周期
++ 挂载： constructor、componentWillMount、render、componentDidMount
++ 更新 componentWillRecieveProps、shouldComponentUpdate、componentWillUpdate、componentDidUpdate
++ 卸载 componentWillUnMount
+
++ 整个渲染过程： 执行constructor，初始化state和props,然后执行componentWillMount，再render,渲染完后执行componentDidMount(在该生命周期函数內dom已经挂载了，这个时候可以添加一些监听事件，或者数据请求),当props变更时，会触发componentWillRecieveProps，然后执行shouldComponentWillUpdate(该生命周期返回一个Boolean,当返回false,不会触发下一步动作),然后执行componentWillUpdate-> render->componentDidUpdate
+卸载时执行componentWillUnMount 这个时候可以在这个生命周期里解除事件绑定、清除定时器等
+即（constructor -> componentWillMount -> render -> componentDidMount ->componentWillRecieveProps->shouldComponentUpdate->componentWillUpdate->render->componentDidUpdate->componentWillUnMount）
+新版生命周期将componentWillMount和componentWillRecieveProps替换为GetDerivedStateFromProps，componentwillUpdate更换为getSnapshotBeforeUpdate()
++ 替换的原因：约束规范，不安全，异步的时候可能出现一系列问题
+
+## 组件通信
++ 父子组件： 父组件传值，子组件props接受，子向父组件：方法传递
++ 兄弟组件：提升state至父组件，createContext
++ 跨层级组件: createContext, redux的状态管理工具
