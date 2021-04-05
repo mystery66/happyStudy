@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-24 13:42:57
- * @LastEditTime: 2021-03-29 14:54:24
+ * @LastEditTime: 2021-03-29 15:08:43
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /study/happyStudy/others/README.md
@@ -119,3 +119,6 @@ function deepClone() {
 + 父子组件： 父组件传值，子组件props接受，子向父组件：方法传递
 + 兄弟组件：提升state至父组件，createContext
 + 跨层级组件: createContext, redux的状态管理工具
++ 其他: url传参、定义全局变量
+
+## 合成事件
