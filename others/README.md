@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-24 13:42:57
- * @LastEditTime: 2021-03-29 15:08:43
+ * @LastEditTime: 2021-04-07 10:38:51
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /study/happyStudy/others/README.md
@@ -97,6 +97,17 @@ function deepClone() {
  + JSON.parse(JSON.stringfy(obj)) 
  会忽略undefined, symbol, 不能序列化函数 不能解决循环引用的对象
 
+## promise
+
+## generator 
+ generator函数是一个状态机，封装了多个内部状态，执行generator 返回的是一个遍历器对象，也就是说，Generator 函数除了状态机，还是一个遍历器对象生成函数。返回的遍历器对象，可以依次遍历 Generator 函数内部的每一个状态。
+
+## async await
+
+## js 垃圾回收
++ 标记清除
+当变量进入环境标记进入环境的标识，离开环境标记为“离开环境”，
++ 引用计数
 ## 执行上下文
 执行上下文可以理解为当前代码的执行环境，它会形成一个作用域。js中运行环境分为3种：
 + 全局环境
